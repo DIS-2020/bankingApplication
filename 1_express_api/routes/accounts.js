@@ -19,11 +19,14 @@ router.post('/', async (req, res) => {
     const message = "This is the post endpoint for accounts. We received the data seen under account";
 
     res.json({
-        message, 
+        message,
         account
     });
 });
 
 // Implement a new endpoint, that will be able to return a specific account by id. 
+router.get('/:id', function (req, res) {
+    res.end('You input id: ' + req.params.id)
+})
 
 module.exports = router;

@@ -7,7 +7,7 @@ const getConnection = async () => {
     if (!connection) {
         // 2. Insert the correct db url
         // Your URL should be mongodb://localhost/<database name>, ie. mongodb://localhost/<database name>
-        connection = await mongoose.connect('mongodb://localhost/<database name>', {
+        connection = await mongoose.connect('mongodb://localhost/bankingSystem', {
             useNewUrlParser: true,
             useCreateIndex: true,
         });
