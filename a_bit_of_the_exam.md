@@ -1,4 +1,4 @@
-## Lidt ekstra udvidelse, som kommer til at være i eksamen
+## Lidt ekstra udvidelse, som kommer til at være med i eksamen
 1. Opret ny account.
 2. Læs accountens balance.
 3. Opdater accountens balance (hæv og indsæt).
