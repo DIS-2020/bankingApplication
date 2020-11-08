@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose')
-const bodyParser = require('body-parser')
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const db = require("./db.js");
 
 //Added Json Body-parser
 app.use(bodyParser.json());
@@ -16,6 +17,10 @@ app.get('/', (req, res) => {
 });
 
 //Start listening
-app.listen(8080, () => {
-    console.log('Server listening on 8080');
-});
+db.getConnection().then(() => {
+    console.log("connection to db established");
+    app.listen(8080, () => {
+        console.log('Server listening on 8080');
+    });
+})
+
